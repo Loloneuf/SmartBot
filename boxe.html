@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html>
 
 <head>
@@ -8,9 +8,9 @@
 </head>
 
 <body>
-	<div class="boxe1"></div>
-	<div class="boxe2"></div>
-	<div class="boxe3"></div>
+	<div class="boxe1" id="boxe1" style="visibility:hidden;"></div>
+	<div class="boxe2" id="boxe2" style="visibility:hidden;"></div>
+	<div class="boxe3" id="boxe3" style="visibility:hidden;"></div>
 	<section class="colorselection">
 		<br><label class ="label1" for="Color1">Select the color of the first square?</label>
 		<input class="list1" list="Colorlist1" id="Color1" name="Color1">
@@ -41,5 +41,21 @@
 		</datalist>
 	</section>
           </datalist>
+		  <script> 
+function clignotement(boxe){ 
+if (document.getElementById(boxe).style.visibility=="visible") {
+document.getElementById(boxe).style.visibility = "hidden"; 
+}
+else {document.getElementById(boxe).style.visibility = "visible"
+}}
+clignotement('boxe1')
+clignotement('boxe2')
+clignotement('boxe3')
+// mise en place de l appel régulier de la fonction toutes les 0.5 secondes 
+setInterval("clignotement('boxe1')", 2000); 
+setInterval("clignotement('boxe2')", 2000); 
+setInterval("clignotement('boxe3')", 2000); 
+
+</script>
 </body>
 </html>
