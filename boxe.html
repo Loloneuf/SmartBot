@@ -42,13 +42,13 @@
 	</section>
           </datalist>
 		  <script> 
-listbox=['boxe1','boxe2','boxe3']			  
+let listbox=['boxe1','boxe2','boxe3']			  
 function clignotement(list){ 
 	for (i===0;i<3;i++){
-if (document.getElementById(listbox[i]).style.visibility=="visible") {
-document.getElementById(listbox[i]).style.visibility = "hidden"; 
+if (document.getElementById(list[i]).style.visibility=="visible") {
+document.getElementById(list[i]).style.visibility = "hidden"; 
 }
-else {document.getElementById(listbox[i]).style.visibility = "visible"
+else {document.getElementById(list[i]).style.visibility = "visible"
 }}}
 clignotement('listbox')
 setInterval("clignotement('listbox')", 1000);  
