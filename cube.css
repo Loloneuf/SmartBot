@@ -4,23 +4,26 @@
 	position:static;
 	width: 200px;
 	height:200px;
-	margin: 75px auto;	
+	margin: 75px auto;
+    padding-top: 1rem;
+	padding-bottom:1rem;
+	padding-left:1rem;
+	padding-right:1rem;
 }
 	
-.boxe1{
-	background-color: rgb(255,0,0);	
+#Submitbutton{
+	position : relative;
+	bottom : 92px;
+left: 250px}
+#submit{
+  font-size: 15px;
+  height: 35px;
+  width: max-content;
 }
-.boxe2{
-	background-color: rgb(0,255,0)
-}
-
-.boxe3{
-	background-color: rgb(0,0,255)
-}
-
+	
+	
 .list3,.list1,.list2{
 display:flex;
 align-items: center;
 }
-
 
