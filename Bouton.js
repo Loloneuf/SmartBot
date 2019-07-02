@@ -9,7 +9,7 @@ function active() {
 		for(h=0;h<5;h++){
 			if (listselect[g].value === listname[h]) {
 				document.getElementById(listbox2[g]).style.backgroundColor= listcolor2[h];
-				Newlist.push(listcolor2[h])
+				Newcolor.push(listcolor2[h])
 				}
 		}
 	}
