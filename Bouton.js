@@ -13,9 +13,15 @@ function active() {
 			if (listselect[g].value === listname[h]) {
 				document.getElementById(listbox2[g]).style.backgroundColor= listcolor2[h];
 				Ptdr.push(listcolor2[h]) 
-				
 			}
+			
+			
 		}
+		
+	if(listname.indexOf(listselect[g].value) === -1) {
+				document.getElementById(listbox2[g]).style.backgroundColor= "rgb(255, 255, 255)"
+			Ptdr.push("rgb(255, 255, 255)") }
 	}
 }
 Submit.addEventListener('click', active)
+	
