@@ -9,13 +9,13 @@ function setcolor(list,listc){
 }
 function clignotement(list,listc){
 for (i=0;i<3;i++){
-if (document.getElementById(list[i]).style.backgroundColor== Newcolor[i]) {
+if (document.getElementById(list[i]).style.backgroundColor== Ptdr[i]) {
 	document.getElementById(list[i]).style.backgroundColor = listc[3]; 
 }
-else {document.getElementById(list[i]).style.backgroundColor = Newcolor[i]
+else {document.getElementById(list[i]).style.backgroundColor = Ptdr[i]
 }}}
 setcolor(listbox,listcolor)
 clignotement(listbox,listcolor)
-setInterval("clignotement(listbox,listcolor)", 1000); 
+setInterval("clignotement(listbox,listcolor)", 1000);
 
 
