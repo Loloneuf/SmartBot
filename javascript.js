@@ -1,21 +1,19 @@
+
 let listbox=['boxe1','boxe2','boxe3']
-let listcolor=['rgb(255, 0, 0)','rgb(0, 255, 0)','rgb(0, 0, 255)',"rgb(255,255,255)"]
 
-
-function setcolor(list,listc){
+function setcolor(list){
  for (j=0;j<3;j++){
- document.getElementById(list[j]).style.backgroundColor = listc[3]
+ document.getElementById(list[j]).style.backgroundColor = "rgb(255,255,255)"
  }
 }
-function clignotement(list,listc){
+function clignotement(list){
 for (i=0;i<3;i++){
 if (document.getElementById(list[i]).style.backgroundColor== Ptdr[i]) {
-	document.getElementById(list[i]).style.backgroundColor = listc[3]; 
+	document.getElementById(list[i]).style.backgroundColor = "rgb(255,255,255)"; 
 }
 else {document.getElementById(list[i]).style.backgroundColor = Ptdr[i]
 }}}
-setcolor(listbox,listcolor)
-clignotement(listbox,listcolor)
-setInterval("clignotement(listbox,listcolor)", 1000);
-
+setcolor(listbox)
+clignotement(listbox)
+setInterval("clignotement(listbox)", 1000); 
 
