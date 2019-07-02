@@ -3,13 +3,13 @@ let listselect = [document.querySelector('#Color1'),document.querySelector('#Col
 let listbox2=['boxe1','boxe2','boxe3']
 let listcolor2=['rgb(255, 0, 0)','rgb(0, 255, 0)','rgb(0, 0, 255)',"rgb(255, 255, 255)" , "rgb(0, 0, 0)"]
 let listname=['Red', 'Green', 'Blue', 'White', 'Black']
-let Newcolor = []
+let Ptdr = []
 function active() {
 	for (g=0;g<3;g++){
 		for(h=0;h<5;h++){
 			if (listselect[g].value === listname[h]) {
 				document.getElementById(listbox2[g]).style.backgroundColor= listcolor2[h];
-				Newcolor.push(listcolor2[h])
+				New.push(listcolor2[h])
 				}
 		}
 	}
