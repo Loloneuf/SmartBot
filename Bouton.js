@@ -3,7 +3,7 @@ let listselect = [document.querySelector('#Color1'),document.querySelector('#Col
 let listbox2=['boxe1','boxe2','boxe3']
 let listcolor2=['rgb(255, 0, 0)','rgb(0, 255, 0)','rgb(0, 0, 255)',"rgb(255, 255, 255)" , "rgb(0, 0, 0)"]
 let listname=['Red', 'Green', 'Blue', 'White', 'Black']
-let Ptdr = []
+let Newcolor = []
 function active() {
 	for (g=0;g<3;g++){
 		for(h=0;h<5;h++){
