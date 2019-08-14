@@ -1,0 +1,25 @@
+
+.boxe1, .boxe2{
+    border: 2px black solid;
+	position:static;
+	width: 200px;
+	height:200px;
+	margin: 100px auto 200px auto;
+    padding-top: 1rem;
+	padding-bottom:1rem;
+	padding-left:1rem;
+	padding-right:1rem;
+}
+	
+#Submitbutton{
+	position : relative;
+	bottom : 90px;
+left: 50px}
+#submit{
+  font-size: 35px;
+  height: 50px;
+  width: max-content;
+}
+	
+
+
