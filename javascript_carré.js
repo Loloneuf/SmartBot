@@ -31,11 +31,13 @@ for (i=0;i<2;i++){
 function turn_right(){
 for (i=0;i<2;i++){
 	document.getElementById(listbox[1]).style.backgroundColor = color[0];
+	document.getElementById(listbox[0]).style.backgroundColor = color[1];
 }}
 
 function turn_left(){
 for (i=0;i<2;i++){
 	document.getElementById(listbox[0]).style.backgroundColor = color[0];
+	document.getElementById(listbox[1]).style.backgroundColor = color[1];
 }}
 
 function square(){
