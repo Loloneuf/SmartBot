@@ -5,13 +5,69 @@
 	<title> Do a square
 	</title>
 	<link href="./carré.css" rel="stylesheet" type="text/css">
+	<style>
+	table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
 </head>
 
 <body>
+<table>
+  <tr>
+    <th colspan='2'><center>List of orders</center></th>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 	<div class="boxe1" id="boxe1"  ></div>
 	<div class="boxe2" id="boxe2"  ></div>
-	<div id="Submitbutton">
-		<button type="button" id="submit">Do a square</button>
+	<div id="Submitbutton" style="display: inline;">
+		<button type="button" id="submit" >Do a square</button>
+    </div>
+	<div class="button" id="Straightline" style="display: inline;">
+		<button type="button" id="submitstraight">Go straight</button>
+    </div>
+	<div class="button" id="Turnright" style="display: inline;">
+		<button type="button" id="submitright">Turn to the right</button>
+    </div>
+	<div class="button" id="Turnleft" style="display: inline;">
+		<button type="button" id="submitleft">Turn to the left</button>
     </div>
 	</section>
 		<script src="./javascript_carré.js">
