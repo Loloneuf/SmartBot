@@ -1,5 +1,4 @@
 let Submit=document.querySelector('#submit');
-let Right=document.querySelector('#submitstraight');
 let listbox=['boxe1','boxe2']
 let color=['rgb(0,0,0)','rgb(255,255,255)']
 function setcolor(){
@@ -18,7 +17,6 @@ for (i=0;i<2;i++){
 	document.getElementById(listbox[1]).style.backgroundColor = color[0];
 }}
 
-
 function square(){
 setTimeout(straight_line,0);
 setTimeout(turn_right,4000);
@@ -33,5 +31,4 @@ setTimeout(setcolor,22000);
 
 setcolor()
 Submit.addEventListener('click', square)
-Right.addEventListener('click', square)
 
