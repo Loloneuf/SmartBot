@@ -1,4 +1,4 @@
-let Submit=document.querySelector('#submit');
+
 let Execute=document.querySelector('#submitexe');
 let Save=document.querySelector('#submitsave');
 let listbox=['boxe1','boxe2']
@@ -40,16 +40,6 @@ for (i=0;i<2;i++){
 	document.getElementById(listbox[1]).style.backgroundColor = color[1];
 }}
 
-function square(){
-setTimeout(straight_line,0);
-setTimeout(turn_right,4000);
-setTimeout(straight_line,6000);
-setTimeout(turn_right,10000);
-setTimeout(straight_line,12000);
-setTimeout(turn_right,16000);
-setTimeout(straight_line,18000);
-setTimeout(setcolor,22000);
-}
 
 function finalexecution(){
 for	(i=0;i<listcomands.length+1;i++){
@@ -57,6 +47,5 @@ setTimeout(listcomands[i], delay[i]);
 }}
 
 setcolor()
-Submit.addEventListener('click', listfunction[0])
 Save.addEventListener('click', saveyourorders)
 Execute.addEventListener('click', finalexecution)

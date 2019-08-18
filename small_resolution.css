@@ -10,12 +10,7 @@
 	padding-right:1rem;
 }
 	
-#Submitbutton{
-	position : relative;
-	bottom : 90px;
-	left: 130px;
-	padding-left:1rem;
-}
+
 #Straightline{
 	position : relative;
 	bottom : 90px;
@@ -47,7 +42,7 @@
 	 margin: 0;
    position: absolute;               
    top: 20%;
-   left:10%;
+   left:9%;
    transform: translate(0, -50%);
   }
 	
@@ -56,7 +51,7 @@ display:flex;
 align-items: center;
 }
 
-#submit, #submitstraight, #submitright, #submitleft, #submitexe, #submitsave{
+ #submitstraight, #submitright, #submitleft, #submitexe, #submitsave{
   font-size: 35px;
   height: 50px;
   width: max-content;
