@@ -14,26 +14,26 @@
 #Straightline{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 100px;
 	padding-left:1rem;
 }
 #Turnright{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 100px;
 	padding-left:1rem;
 }
 #Turnleft{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 100px;
 	padding-left:1rem;
 }
 
 #Execute{
 	 margin: 0;
    position: absolute;               
-   top: 20%;
+   top: 22%;
    left:50%;
    transform: translate(0, -50%);
   
@@ -41,8 +41,8 @@
 #Save{
 	 margin: 0;
    position: absolute;               
-   top: 20%;
-   left:9%;
+   top: 22%;
+   left:10%;
    transform: translate(0, -50%);
   }
 	

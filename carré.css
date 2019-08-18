@@ -11,28 +11,23 @@
 	padding-right:1rem;
 }
 	
-#Submitbutton{
-	position : relative;
-	bottom : 90px;
-	left: 130px;
-	padding-left:1rem;
-}
+	
 #Straightline{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 250px;
 	padding-left:1rem;
 }
 #Turnright{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 250px;
 	padding-left:1rem;
 }
 #Turnleft{
 	position : relative;
 	bottom : 90px;
-	left: 130px;
+	left: 250px;
 	padding-left:1rem;
 }
 
@@ -57,7 +52,7 @@ display:flex;
 align-items: center;
 }
 
-#submit, #submitstraight, #submitright, #submitleft, #submitexe, #submitsave{
+#submitstraight, #submitright, #submitleft, #submitexe, #submitsave{
   font-size: 35px;
   height: 50px;
   width: max-content;
