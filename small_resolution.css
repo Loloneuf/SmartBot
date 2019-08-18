@@ -38,7 +38,7 @@
 #Execute{
 	 margin: 0;
    position: absolute;               
-   top: 22%;
+   top: 24%;
    left:50%;
    transform: translate(0, -50%);
   
@@ -46,8 +46,8 @@
 #Save{
 	 margin: 0;
    position: absolute;               
-   top: 22%;
-   left:18%;
+   top: 24%;
+   left:15%;
    transform: translate(0, -50%);
   }
 	
