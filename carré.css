@@ -3,11 +3,10 @@
     border: 2px black solid;
 	width: 200px;
 	height:200px;
-	margin-right:auto;
-	margin-left:auto;
-    padding-top: 1rem;
+	margin-right:auto auto;
+	padding-top: 1rem;
 	padding-bottom:1rem;
-	padding-left:2rem;
+	padding-left:6rem;
 	padding-right:1rem;
 	float:left;
 }
