@@ -1,12 +1,13 @@
 
 .boxe1, .boxe2{
-	position:static;
+	position:flex;
 	width: 200px;
 	height:200px;
 	margin:0px 100px 0px 100px;
     	padding-top: 1rem;
 	padding-bottom:1rem;
 	padding-left:1rem;
+	align-items: center;
 }
 	
 	
