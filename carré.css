@@ -3,11 +3,11 @@
     border: 2px black solid;
 	width: 200px;
 	height:200px;
-	margin-right:auto auto;
+	margin:0 auto;
 	padding-top: 1rem;
 	padding-bottom:1rem;
 	padding-left:6rem;
-	padding-right:1rem;
+	padding-right:6rem;
 	float:left;
 }
 	
