@@ -1,9 +1,23 @@
-.boxe2, .boxe1{
-    width: 200px;
-    height:200px;
-    display: flex;
-  justify-content: center;
+#boxe1{
+    border: 2px black solid;
+	width: 400px;
+	height:400px;
+	margin: 100px auto 200px 200px;
 }
+
+#boxe2{
+    border: 2px black solid;
+	width: 400px;
+	height:400px;
+	margin: 100px auto 200px 30px;
+}
+
+.boxe{
+    position: relative;
+    display: inline-block;
+	
+}
+	
 	
 #Straightline{
 	position : relative;
