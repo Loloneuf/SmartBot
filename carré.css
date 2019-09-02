@@ -1,13 +1,11 @@
 
 .boxe1, .boxe2{
     border: 2px black solid;
+	margin: auto;
 	width: 200px;
 	height:200px;
 	margin:0 auto;
-	padding-top: 1rem;
-	padding-bottom:1rem;
-	padding-left:6rem;
-	padding-right:6rem;
+	padding:1rem;
 	float:left;
 }
 	
