@@ -1,14 +1,14 @@
 #boxe1{
     border: 2px black solid;
-	width: 400px;
-	height:400px;
+	width: 200px;
+	height:200px;
 	margin: 100px auto 200px 200px;
 }
 
 #boxe2{
     border: 2px black solid;
-	width: 400px;
-	height:400px;
+	width: 200px;
+	height:200px;
 	margin: 100px auto 200px 30px;
 }
 
