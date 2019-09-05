@@ -15,55 +15,28 @@
 .boxe{
     position: relative;
     display: inline-block;
-	
-}
-	
-	
-#Straightline{
-	position : relative;
-	bottom : 90px;
-	left: 200px;
-	padding-left:1rem;
-}
-#Turnright{
-	position : relative;
-	bottom : 90px;
-	left: 200px;
-	padding-left:1rem;
-}
-#Turnleft{
-	position : relative;
-	bottom : 90px;
-	left: 200px;
-	padding-left:1rem;
+
 }
 
 #Execute{
 	 margin: 0;
-   position: absolute;               
+   position: absolute;
    top: 20%;
    left:52%;
    transform: translate(0, -50%);
-  
+
 }
-#Save{
-	 margin: 0;
-   position: absolute;               
-   top: 20%;
-   left:24%;
-   transform: translate(0, -50%);
-  }
-	
+
 .button {
 display:flex;
 align-items: center;
 }
 
-#submitstraight, #submitright, #submitleft, #submitexe, #submitsave{
+#submitexe{
   font-size: 35px;
   height: 50px;
   width: max-content;
 }
-	
+
 
 
