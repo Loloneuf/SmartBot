@@ -3,7 +3,7 @@ let Execute=document.querySelector('#submitexe');
 let Save=document.querySelector('#submitsave');
 let listbox=['boxe1','boxe2']
 let color=['rgb(0,0,0)','rgb(255,255,255)']
-let listfunction = [straight_line,turn_right,turn_left]
+let listfunction = [straight_line,turn_right,turn_left, setcolor]
 let listcomands =[]
 let delay= [0,2000,4000,6000,8000,10000,12000,14000,16000,20000,22000,24000]
 
@@ -43,9 +43,26 @@ for (i=0;i<2;i++){
 
 function finalexecution(){
 for	(i=0;i<listcomands.length+1;i++){
-setTimeout(listcomands[i], delay[i]);		
-}}
+setTimeout(listcomands[i], delay[i]);
+}
+}
+
+function square(){
+setTimeout(straight_line,2000);
+setTimeout(turn_right, 6000);
+setTimeout(straight_line, 8000);
+setTimeout(turn_right, 12000);
+setTimeout(straight_line, 14000);
+setTimeout(turn_right, 18000);
+setTimeout(straight_line, 20000);
+setTimeout(setcolor,24000)
+}
+
+function runinfinity(){
+finalexecution()
+setInterval("finalexecution()", delay[listcomands.length]);
+
+}
 
 setcolor()
-Save.addEventListener('click', saveyourorders)
-Execute.addEventListener('click', finalexecution)
+Execute.addEventListener('click', square)
