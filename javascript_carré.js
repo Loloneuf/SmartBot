@@ -54,7 +54,7 @@ setTimeout(straight_line, 5000);
 setTimeout(turn_right, 7000);
 setTimeout(straight_line, 8000);
 setTimeout(turn_right, 10000);
-setTimeout(straight_line, 110000);
+setTimeout(straight_line, 11000);
 setTimeout(setcolor,13000)
 }
 
