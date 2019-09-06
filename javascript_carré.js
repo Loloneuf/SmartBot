@@ -49,13 +49,13 @@ setTimeout(listcomands[i], delay[i]);
 
 function square(){
 setTimeout(straight_line,2000);
-setTimeout(turn_right, 6000);
+setTimeout(turn_right, 4000);
+setTimeout(straight_line, 5000);
+setTimeout(turn_right, 7000);
 setTimeout(straight_line, 8000);
-setTimeout(turn_right, 12000);
-setTimeout(straight_line, 14000);
-setTimeout(turn_right, 18000);
-setTimeout(straight_line, 20000);
-setTimeout(setcolor,24000)
+setTimeout(turn_right, 10000);
+setTimeout(straight_line, 110000);
+setTimeout(setcolor,13000)
 }
 
 function runinfinity(){
