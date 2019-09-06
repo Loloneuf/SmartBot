@@ -48,21 +48,23 @@ setTimeout(listcomands[i], delay[i]);
 }
 
 function square(){
-setTimeout(straight_line,2000);
-setTimeout(turn_right, 3000);
-setTimeout(straight_line, 3700);
-setTimeout(turn_right, 4700);
-setTimeout(straight_line, 5400);
-setTimeout(turn_right, 6400);
-setTimeout(straight_line, 7100);
-setTimeout(setcolor,8100)
+setTimeout(straight_line,0);
+setTimeout(turn_right, 2000);
+// setTimeout(straight_line, 5000);
+// setTimeout(turn_right, 7000);
+// setTimeout(straight_line, 8000);
+// setTimeout(turn_right, 10000);
+// setTimeout(straight_line, 11000);
+// setTimeout(setcolor,13000)
 }
 
 function runinfinity(){
 finalexecution()
-setInterval("finalexecution()", delay[listcomands.length]);
+setInterval("square()", 2500);
 
 }
 
 setcolor()
 Execute.addEventListener('click', square)
+
+
