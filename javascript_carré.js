@@ -49,7 +49,7 @@ setTimeout(listcomands[i], delay[i]);
 
 function square(){
 setTimeout(straight_line,0);
-setTimeout(turn_right, 1500);
+setTimeout(turn_right, 1000);
 // setTimeout(straight_line, 5000);
 // setTimeout(turn_right, 7000);
 // setTimeout(straight_line, 8000);
