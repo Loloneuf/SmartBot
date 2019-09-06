@@ -49,7 +49,7 @@ setTimeout(listcomands[i], delay[i]);
 
 function square(){
 setTimeout(straight_line,0);
-setTimeout(turn_right, 2000);
+setTimeout(turn_right, 1500);
 // setTimeout(straight_line, 5000);
 // setTimeout(turn_right, 7000);
 // setTimeout(straight_line, 8000);
@@ -60,7 +60,7 @@ setTimeout(turn_right, 2000);
 
 function runinfinity(){
 finalexecution()
-setInterval("square()", 2500);
+setInterval("square()", 2000);
 
 }
 
