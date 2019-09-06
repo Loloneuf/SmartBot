@@ -39,10 +39,18 @@ align-items: center;
 }
 
 html, body {
-                width: 100%;
-                height: 100%;
+                width: 80%;
+                height: 20%;
                 margin: 0;
                 padding: 0;}
+
+#maincontainer {
+top:0px;
+padding-top:0;
+margin:auto;
+position:relative;
+width:80%;
+height:20%;}
 
 
 
