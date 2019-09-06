@@ -65,6 +65,6 @@ setInterval("square()", 2500);
 }
 
 setcolor()
-Execute.addEventListener('click', square)
+Execute.addEventListener('click', runinfinity)
 
 
