@@ -1,14 +1,14 @@
 #boxe1{
     border: 2px black solid;
-	width: 200px;
-	height:200px;
+	width: 400px;
+	height:400px;
 	margin: 100px auto 200px 220px;
 }
 
 #boxe2{
     border: 2px black solid;
-	width: 200px;
-	height:200px;
+	width: 400px;
+	height:400px;
 	margin: 100px auto 200px 30px;
 }
 
@@ -37,20 +37,5 @@ align-items: center;
   height: 50px;
   width: max-content;
 }
-
-html, body {
-                width: 80%;
-                height: 20%;
-                margin: 0;
-                padding: 0;}
-
-#maincontainer {
-top:0px;
-padding-top:0;
-margin:auto;
-position:relative;
-width:80%;
-height:20%;}
-
 
 
