@@ -2,13 +2,14 @@
     border: 2px black solid;
 	width: 400px;
 	height:400px;
-	margin: 100px auto 200px 40px;}
+	margin: 50px auto 200px 40px;
+}
 
 #boxe2{
     border: 2px black solid;
 	width: 400px;
 	height:400px;
-	margin: 100px auto 200px 30px;
+	margin: 50px auto 200px 30px;
 }
 
 .boxe{
@@ -20,7 +21,7 @@
 #Execute{
 	 margin: 0;
    position: absolute;
-   top: 20%;
+   top: 70%;
    left:52%;
    transform: translate(0, -50%);
 
@@ -36,5 +37,3 @@ align-items: center;
   height: 50px;
   width: max-content;
 }
-
-
