@@ -1,17 +1,52 @@
 <!DOCTYPE html5>
 <html>
 <body>
-	<video autoplay></video>
+<video autoplay></video>
+<img src="">
+<canvas style="display:none;"></canvas>
+<div id="screenshot" style="text-align:center;">
+  <video class="videostream" autoplay></video>
+  <img id="screenshot-img">
+  <p><button class="capture-button">Capture video</button>
+  <p><button id="screenshot-button" disabled>Take screenshot</button></p>
+</div>
 
+
+<style>
+video, #cssfilters-video, #screenshot-img {
+  width: 400px;
+  height: 300px;
+}
+video, #cssfilters-stream {
+  background: rgba(255,255,255,0.5);
+  border: 1px solid #ccc;
+}
+</style>
 <script>
-const constraints = {
-  video: true
+const captureVideoButton =
+  document.querySelector('#screenshot .capture-button');
+const screenshotButton = document.querySelector('#screenshot-button');
+const img = document.querySelector('#screenshot img');
+const video = document.querySelector('#screenshot video');
+
+const canvas = document.createElement('canvas');
+
+captureVideoButton.onclick = function() {
+  navigator.mediaDevices.getUserMedia(constraints).
+    then(handleSuccess).catch(handleError);
 };
 
-const video = document.querySelector('video');
+screenshotButton.onclick = video.onclick = function() {
+  canvas.width = video.videoWidth;
+  canvas.height = video.videoHeight;
+  canvas.getContext('2d').drawImage(video, 0, 0);
+  // Other browsers will fall back to image/png
+  img.src = canvas.toDataURL('image/webp');
+};
 
-navigator.mediaDevices.getUserMedia(constraints).
-  then((stream) => {video.srcObject = stream});
+function handleSuccess(stream) {
+  screenshotButton.disabled = false;
+  video.srcObject = stream;
 </script>
 </body>
 </html>
