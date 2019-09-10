@@ -1,7 +1,6 @@
 <!DOCTYPE html5>
 <html>
 <body>
-<img src="">
 <canvas style="display:none;"></canvas>
 <div id="screenshot" style="text-align:center;">
   <video class="videostream" autoplay></video>
@@ -12,18 +11,17 @@
 
 
 <style>
-video, #cssfilters-video, #screenshot-img {
+video, #screenshot-img {
   width: 400px;
   height: 300px;
 }
-video, #cssfilters-stream {
+video {
   background: rgba(255,255,255,0.5);
   border: 1px solid #ccc;
 }
 </style>
 <script>
-const captureVideoButton =
-  document.querySelector('#screenshot .capture-button');
+const captureVideoButton =document.querySelector('#screenshot .capture-button');
 const screenshotButton = document.querySelector('#screenshot-button');
 const img = document.querySelector('#screenshot img');
 const video = document.querySelector('#screenshot video');
