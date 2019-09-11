@@ -3,19 +3,18 @@
 <body>
 <video id="Video_window" controls autoplay></video>
 <button id="capture">Take a screenshot</button>
-  <button id="save">Save</button>
 <canvas id="Screenshot_window" width=320 height=240></canvas>
+<button id="stop-button">Stop</button>
+<a href="#" class="button" id="btn-download">Download</a>
 <script>
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
   const context = canvas.getContext('2d');
   const captureButton = document.getElementById('capture');
-  const save= document.getElementById('save');
+  const stop=document.getElementById('stop-button');
   const constraints = {
     video: true,
   };
-  const d=canvas.toDataURL("image/png");
-const w=window.open('about:blank','image from canvas');
 
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
@@ -27,12 +26,10 @@ const w=window.open('about:blank','image from canvas');
     .then((stream) => {
       player.srcObject = stream;
     });
-
-function writo(){
-w.document.write("<img src='"+d+"' alt='from canvas'/>")}
-
-	save.addEventListener('click', writo)
-
-</script>
+var button = document.getElementById('btn-download');
+button.addEventListener('click', function (e) {
+    var dataURL = canvas.toDataURL('image/png');
+    button.href = dataURL;
+});
 </body>
 </html>
