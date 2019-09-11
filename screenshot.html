@@ -1,16 +1,16 @@
 <!DOCTYPE html5>
 <html>
 <body>
-
-<video id="player" controls autoplay></video>
-<button id="capture">Capture</button>
-<canvas id="canvas" width=320 height=240></canvas>
+<video id="Video_window" controls autoplay></video>
+<button id="capture">Take a screenshot</button>
+<canvas id="Screenshot_window" width=320 height=240></canvas>
+<button id="stop-button">Stop</button>
 <script>
-  const player = document.getElementById('player');
-  const canvas = document.getElementById('canvas');
+  const player = document.getElementById('Video_window');
+  const canvas = document.getElementById('Screenshot_window');
   const context = canvas.getContext('2d');
   const captureButton = document.getElementById('capture');
-
+  const stop=document.getElementById('stop-button');
   const constraints = {
     video: true,
   };
@@ -25,6 +25,12 @@
     .then((stream) => {
       player.srcObject = stream;
     });
+
+function stop_function(){
+    video.pause();
+    localMediaStream.stop();
+  }
+	stop.addEventListener('click', stop_function)
 </script>
-  </body>
+</body>
 </html>
