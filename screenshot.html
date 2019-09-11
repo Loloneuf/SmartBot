@@ -4,12 +4,12 @@
 <video id="Video_window" controls autoplay></video>
 <button id="capture">Take a screenshot</button>
 <canvas id="Screenshot_window" width=320 height=240></canvas>
-<a href="#" class="button" id="btn-download">Download</a>
 <script>
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
   const context = canvas.getContext('2d');
   const captureButton = document.getElementById('capture');
+  const stop=document.getElementById('stop-button');
   const constraints = {
     video: true,
   };
@@ -24,11 +24,6 @@
     .then((stream) => {
       player.srcObject = stream;
     });
-const button = document.getElementById("btn-download");
-button.addEventListener('click', function (e) {
- const dataURL = canvas.toDataURL('image/png');
-    button.href = dataURL;
-});
-  </script>
+</script>
 </body>
 </html>
