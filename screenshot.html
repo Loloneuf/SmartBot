@@ -4,7 +4,6 @@
 <video id="Video_window" controls autoplay></video>
 <button id="capture">Take a screenshot</button>
 <canvas id="Screenshot_window" width=320 height=240></canvas>
-<button id="stop-button">Stop</button>
 <script>
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
@@ -26,11 +25,7 @@
       player.srcObject = stream;
     });
 
-function stop_function(){
-    video.pause();
-    localMediaStream.stop();
-  }
-	stop.addEventListener('click', stop_function)
+
 </script>
 </body>
 </html>
