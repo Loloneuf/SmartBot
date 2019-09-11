@@ -3,16 +3,19 @@
 <body>
 <video id="Video_window" controls autoplay></video>
 <button id="capture">Take a screenshot</button>
+  <button id="save">Save</button>
 <canvas id="Screenshot_window" width=320 height=240></canvas>
 <script>
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
   const context = canvas.getContext('2d');
   const captureButton = document.getElementById('capture');
-  const stop=document.getElementById('stop-button');
+  const save= document.getElementById('save');
   const constraints = {
     video: true,
   };
+  const d=canvas.toDataURL("image/png");
+const w=window.open('about:blank','image from canvas');
 
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
@@ -25,6 +28,10 @@
       player.srcObject = stream;
     });
 
+function writo(){
+w.document.write("<img src='"+d+"' alt='from canvas'/>")}
+
+	save.addEventListener('click', writo)
 
 </script>
 </body>
