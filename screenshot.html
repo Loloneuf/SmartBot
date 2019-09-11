@@ -17,6 +17,8 @@
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
+    const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
+    document.write(imgData);				  
   });
 
   // Attach the video stream to the video element and autoplay.
@@ -25,7 +27,6 @@
       player.srcObject = stream;
     });
 	
-const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
 </script>
 </body>
 </html>
