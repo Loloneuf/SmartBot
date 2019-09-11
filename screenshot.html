@@ -24,6 +24,8 @@
     .then((stream) => {
       player.srcObject = stream;
     });
+	
+const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
 </script>
 </body>
 </html>
