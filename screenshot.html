@@ -19,11 +19,11 @@
     // Draw the video frame to the canvas.
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
-    for(i=0; i<imgData.length;i++){
+    for(i=0; i<imgData.length;i +=4){
 	if(imgData[i]>230){
-	Red_object_pixel.push(imgData[i]);
-	console.log(Red_object_pixel);}}
-
+	Red_object_pixel.push(imgData[i]);}
+    }
+console.log(Red_object_pixel);
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
