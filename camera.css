@@ -15,3 +15,8 @@
     position: relative;
     display: inline-block;
 }
+
+#Video_window{
+	width:200px;
+	heigh:=200px;
+	margin : 300 auto auto auto;}
