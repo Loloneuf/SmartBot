@@ -13,15 +13,17 @@
   const constraints = {
     video: true,
   };
+  Red_object_pixel = []        
+
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
     console.log(imgData);
-	/*for(i=0; i<imgData.length;i += 4){
-	if(imgData[i]> ??){
-    if(imgData[i+1]<??){
-      if(imgData[i+2]<??){	
+	for(i=0; i<imgData.length;i += 4){
+	if(imgData[i]>230){
+    if(imgData[i+1]<110){
+      if(imgData[i+2]<110){	
         Red_object_pixel.push(imgData[i])        
       }
     }
