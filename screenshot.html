@@ -18,10 +18,15 @@
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
     console.log(imgData);
-	for(i=0; i<imgData.length;i += 4){
-	if(imgData[i]> ??)
-	Red_object_pixel.push(imgData[i])
-	
+	/*for(i=0; i<imgData.length;i += 4){
+	if(imgData[i]> ??){
+    if(imgData[i+1]<??){
+      if(imgData[i+2]<??){	
+        Red_object_pixel.push(imgData[i])        
+      }
+    }
+  }
+	*/
   });
   // Attach the video stream to the video element and autoplay.
   navigator.mediaDevices.getUserMedia(constraints)
