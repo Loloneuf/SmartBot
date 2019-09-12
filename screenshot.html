@@ -25,10 +25,13 @@
     		//if(imgData[i+1]<110){
       			//if(imgData[i+2]<110){	
         Red_object_pixel.push(imgData[i]);
+	console.log(Red_object_pixel);
+
       //}
     //}
   }
-	
+else{
+console.log("hihi")}	
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
