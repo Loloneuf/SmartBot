@@ -13,7 +13,7 @@
   const constraints = {
     video: true,
   };
-  Red_object_pixel = []        
+  let Red_object_pixel = []        
 
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
@@ -24,11 +24,12 @@
 	if(imgData[i]>230){
     if(imgData[i+1]<110){
       if(imgData[i+2]<110){	
-        Red_object_pixel.push(imgData[i])        
+        Red_object_pixel.push(imgData[i])
+	console.log(Red_object_pixel)
       }
     }
   }
-	*/
+	
   });
   // Attach the video stream to the video element and autoplay.
   navigator.mediaDevices.getUserMedia(constraints)
