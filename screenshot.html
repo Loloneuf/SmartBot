@@ -1,9 +1,30 @@
 <!DOCTYPE html5>
-<html>
+
+<head>
+	<title> Do a square</title>
+	<link href="./carré.css" rel="stylesheet" type="text/css"/>
+</head>
+	
+	
+	
 <body>
-<video id="Video_window" controls autoplay></video>
-<button id="capture">Take a screenshot</button>
-<canvas id="Screenshot_window" width=320 height=240></canvas>
+	<video id="Video_window" controls autoplay></video>
+	<button id="capture">Take a screenshot</button>
+	<canvas id="Screenshot_window" width=320 height=240></canvas>
+	<div class="holder">
+		<div class="boxe" id="boxe1"  ></div>
+		<div class="boxe" id="boxe2"  ></div>
+	</div>
+	<div id="Execute" >
+		<button type="button" id="submitexe">Execute the sequence</button>
+    	</div>
+	</section>
+		<script src="./javascript_carré.js">
+    </script>
+	<script src="./ButtonToTable.js">
+    </script>
+
+
 <script>
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
@@ -36,3 +57,4 @@ console.log(center_position);
 </script>
 </body>
 </html>
+
