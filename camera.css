@@ -1,0 +1,17 @@
+#boxe1{
+    border: 2px black solid;
+	width: 400px;
+	height:400px;
+	margin: 50px auto 200px 40px;
+}
+#boxe2{
+    border: 2px black solid;
+	width: 400px;
+	height:400px;
+	margin: 50px auto 200px 30px;
+}
+
+.boxe{
+    position: relative;
+    display: inline-block;
+}
