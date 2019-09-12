@@ -21,7 +21,8 @@
     const imgData = context.getImageData(0, 0, canvas.width, canvas.height).data;
     for(i=0; i<imgData.length;i++){
 	if(imgData[i]>230){
-	Red_object_pixel.push(imgData[i]);}}
+	Red_object_pixel.push(imgData[i]);
+	console.log(Red_object_pixel);}}
 
   });
   navigator.mediaDevices.getUserMedia(constraints)
