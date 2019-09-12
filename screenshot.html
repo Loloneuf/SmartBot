@@ -24,7 +24,7 @@
 	Red_object_pixel.push(i/4);}
     }
    let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
-   let pixel_center_of_object = sum_of_pixels / Red_object_pixel.length;
+   let pixel_center_of_object =Math.round(sum_of_pixels / Red_object_pixel.length);
 console.log(pixel_center_of_object);
   });
   navigator.mediaDevices.getUserMedia(constraints)
