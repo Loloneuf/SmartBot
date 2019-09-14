@@ -43,11 +43,11 @@
 	imgData[i+2]=255;}}
   console.log(imgData)
 	 let pic = [];
-	for( i = 0; i < imgData.length; i++) {pic.push(imgData[i];}
+	for( i = 0; i < imgData.length; i++) {pic.push(imgData[i]);}
 	let data = {
     	width: canvas.width,
     	height: canvas.height,
-    	imgData : pic
+    	imgData : pic,
 }
 	let idata = context.createImageData(data.width, data.height);
      for(i = 0; i < idata.data.length; i++) {idata.data[i] = imgData[i];}
