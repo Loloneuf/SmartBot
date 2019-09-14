@@ -26,12 +26,13 @@
   const stop=document.getElementById('stop-button');
   const constraints = {
     video: true,
+video: {
+    facingMode: 'environment'
+};
   };
 
-	{
-  video: {
- facingMode: 'user'
-  }}
+	
+ 
 	
   captureButton.addEventListener('click', () => {
     // Draw the video frame to the canvas.
