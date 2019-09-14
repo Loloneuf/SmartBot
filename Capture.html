@@ -1,51 +1,74 @@
 <!DOCTYPE html5>
-<html>
+
+<head>
+	<title> Camera Test</title>
+	<link href="./camera.css" rel="stylesheet" type="text/css"/>
+</head>
+	
+	
+	
 <body>
-<div id="basic" style="text-align:center;">
-  <video class="videostream" autoplay></video>
-  <p><button class="capture-button">Capture video</button> <button id="stop-button">Stop</button></p>
-</div>
-
-
-
-<style>
-video, #screenshot-img {
-  width: 400px;
-  height: 300px;
-}
-video {
-  background: rgba(255,255,255,0.5);
-  border: 1px solid #ccc;
-}
-</style>
+	
+	<div class="holder">
+		<div class="boxe" id="boxe1"  ></div>
+		<div class="boxe" id="boxe2"  ></div>
+		<video id="Video_window" controls autoplay></video>
+	<button id="capture">Take a screenshot</button>
+	<canvas id="Screenshot_window" width=320 height=240></canvas>
+	</div>
 
 
 <script>
-function handleError(error) {
-  console.error('navigator.getUserMedia error: ', error);
+  const player = document.getElementById('Video_window');
+  const canvas = document.getElementById('Screenshot_window');
+  const context = canvas.getContext('2d');
+  const captureButton = document.getElementById('capture');
+  const stop=document.getElementById('stop-button');
+  const constraints = { 
+  video: true,
+  video: {
+  facingMode: 'environment'},
 }
-const constraints = {video: true};
 
-(function() {
-  const video = document.querySelector('#basic video');
-  const captureVideoButton = document.querySelector('#basic .capture-button');
-  let localMediaStream;
+	
+ 
+	
+  captureButton.addEventListener('click', () => {
+    // Draw the video frame to the canvas.
+    let Red_object_pixel = [];        
+    context.drawImage(player, 0, 0, canvas.width, canvas.height);
+    const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
+    for(i=0; i<imgData.length;i +=4){
+	if(imgData[i]>200 && imgData[i+1] <130 && imgData[i+2] <130){
+	imgData[i]=255;
+	imgData[i+1]=0;
+	imgData[i+2]=0;}
+    else{imgData[i]=255;
+	imgData[i+1]=255;
+	imgData[i+2]=255;}}
+  console.log(imgData)
+	 let pic = [];
+	for( i = 0; i < imgData.length; i++) {pic.push(imgData[i]);}
+	let data = {
+    	width: canvas.width,
+    	height: canvas.height,
+    	imgData : pic,
+}
+	let idata = context.createImageData(data.width, data.height);
+     for(i = 0; i < idata.data.length; i++) {idata.data[i] = imgData[i];}
 
-  function handleSuccess(stream) {
-    localMediaStream = stream;
-    video.srcObject = stream;
-  }
+     context.putImageData(idata,0,0);
 
-  captureVideoButton.onclick = function() {
-    navigator.mediaDevices.getUserMedia(constraints).
-      then(handleSuccess).catch(handleError);
-  };
-
-  document.querySelector('#stop-button').onclick = function() {
-    video.pause();
-    localMediaStream.stop();
-  };
-})();
+   //let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
+   //let pixel_center_of_object =Math.round(sum_of_pixels / Red_object_pixel.length);
+   //let center_position= pixel_center_of_object % canvas.width;
+//console.log(center_position);
+  });
+  navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+      player.srcObject = stream;
+    });
+	
 </script>
 </body>
 </html>
