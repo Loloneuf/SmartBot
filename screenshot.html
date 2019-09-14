@@ -42,8 +42,7 @@
 	imgData[i+1]=255;
 	imgData[i+2]=255;}}
   console.log(imgData)
-	 let idata = context.createImageData(canvas.width, canvas.height);
-	context.putImageData(imgData,0,0);
+	context.putImageData(imgData,0,0,canvas.width,canvas.height);
 
    //let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
    //let pixel_center_of_object =Math.round(sum_of_pixels / Red_object_pixel.length);
