@@ -32,7 +32,7 @@
     // Draw the video frame to the canvas.
     let Red_object_pixel = [];        
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
-    const imgData = context.getImageData(player,0,0, canvas.width, canvas.height).data;
+    const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
     for(i=0; i<imgData.length + 1;i +=4){
 	if(imgData[i]>200 && imgData[i+1] <130 && imgData[i+2] <130){
 	imgData[i]=255;
