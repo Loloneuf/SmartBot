@@ -55,11 +55,10 @@ function turn_left(){
 for (i=0;i<2;i++){
 	document.getElementById(listbox[0]).style.backgroundColor = color[0];
 	document.getElementById(listbox[1]).style.backgroundColor = color[1];
-}}
- 
-	
-  captureButton.addEventListener('click', () => {
-    // Draw the video frame to the canvas.
+}}				 
+				 
+	function picture(){
+    setcolor()
     let Red_object_pixel = [];        
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
@@ -103,6 +102,9 @@ for (i=0;i<2;i++){
 
 	  
   });
+	
+captureButton.addEventListener('click', picture)
+
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
       player.srcObject = stream;
