@@ -39,7 +39,7 @@
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
     for(i=0; i<imgData.length;i +=4){
-	if(imgData[i]>200 && imgData[i+1] <130 && imgData[i+2] <130){
+	if(imgData[i]>180 && imgData[i+1] <140 && imgData[i+2] <140){
 	Red_object_pixel.push(i/4)
 	imgData[i]=255;
 	imgData[i+1]=0;
@@ -67,7 +67,7 @@
    let center_position= pixel_center_of_object/320
 	  console.log(center_position)
 	let test = center_position- Math.trunc(center_position)  
-   document.getElementById("value").innerHTML = pixel_center_of_object;
+   document.getElementById("value").innerHTML = test;
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
