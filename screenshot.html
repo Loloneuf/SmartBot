@@ -24,13 +24,38 @@
   const context = canvas.getContext('2d');
   const captureButton = document.getElementById('capture');
   const stop=document.getElementById('stop-button');
+  let listbox=['boxe1','boxe2']
+  let color=['rgb(0,0,0)','rgb(255,255,255)']
   const constraints = { 
   video: true,
   video: {
   facingMode: 'environment'},
 }
 
-	
+  
+  
+	function setcolor(){
+ for (j=0;j<2;j++){
+ document.getElementById(listbox[j]).style.backgroundColor = color[0]
+ }
+}
+
+function straight_line(){
+for (i=0;i<2;i++){
+	document.getElementById(listbox[i]).style.backgroundColor = color[1];
+}}
+
+function turn_right(){
+for (i=0;i<2;i++){
+	document.getElementById(listbox[1]).style.backgroundColor = color[0];
+	document.getElementById(listbox[0]).style.backgroundColor = color[1];
+}}
+
+function turn_left(){
+for (i=0;i<2;i++){
+	document.getElementById(listbox[0]).style.backgroundColor = color[0];
+	document.getElementById(listbox[1]).style.backgroundColor = color[1];
+}}
  
 	
   captureButton.addEventListener('click', () => {
@@ -68,6 +93,15 @@
 	  console.log(center_position)
 	let test = center_position- Math.trunc(center_position)  
    document.getElementById("value").innerHTML = test;
+	  if (test*320 < (320/3)) {
+	setTimeout(turn_left, 1000);}
+	  else if(test*320 > (640/3)) {
+	setTimeout(turn_right, 1000);}
+	  else if ((320/3)< test*320<(640/3)) {
+	setTimeout(straight_line, 1000);}
+
+
+	  
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
