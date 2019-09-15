@@ -63,8 +63,9 @@
    let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
 	  console.log(sum_of_pixels)
    let pixel_center_of_object =Math.round(sum_of_pixels / Red_object_pixel.length);
-   let center_position= pixel_center_of_object % canvas.width;
-   document.getElementById("value").innerHTML = center_position;
+   let center_position= pixel_center_of_object / canvas.width;
+	let test = center_position- Math.trunc(center_position)  
+   document.getElementById("value").innerHTML = test;
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
