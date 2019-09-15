@@ -63,7 +63,9 @@
    let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
 	  console.log(sum_of_pixels)
    let pixel_center_of_object =Math.round(sum_of_pixels / Red_object_pixel.length);
+	  console.log(pixel_center_of_object)
    let center_position= pixel_center_of_object / canvas.width;
+	  console.log(pixel_center_of_object)
 	let test = center_position- Math.trunc(center_position)  
    document.getElementById("value").innerHTML = test;
   });
