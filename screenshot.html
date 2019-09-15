@@ -67,7 +67,7 @@
    let center_position= pixel_center_of_object / canvas.height;
 	  console.log(center_position)
 	let test = center_position- Math.trunc(center_position)  
-   document.getElementById("value").innerHTML = test;
+   document.getElementById("value").innerHTML = center_position;
   });
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
