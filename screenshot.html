@@ -32,7 +32,7 @@
   facingMode: 'environment'},
 }
 
-  
+      setcolor();
   
 	function setcolor(){
  for (j=0;j<2;j++){
@@ -58,7 +58,6 @@ for (i=0;i<2;i++){
 }}				 
 				 
 function picture(){
-    setcolor();
     let Red_object_pixel = [];        
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
