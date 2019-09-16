@@ -15,8 +15,10 @@
 		<div class="boxe" id="boxe1"  ></div>
 		<div class="boxe" id="boxe2"  ></div>
 		<video id="Video_window" controls autoplay></video>
-	<button id="capture">Take a screenshot</button>
 	<canvas id="Screenshot_window" width=320 height=240></canvas>
+<br>
+	<button id="capture">Take a screenshot</button>
+
 	</div>
 
 
@@ -106,15 +108,12 @@ function picture(){
    document.getElementById("value").innerHTML = center_positionx/320;
 	 document.getElementById("value2").innerHTML = center_positiony/240;
 
-	  if ((center_positionx/320)< 0.4) {
-		  setcolor();		
-		  turn_left()}
-	  else if((center_positionx/320) > 0.6) {
-		setcolor();
-		turn_right()}
-	  else {
-		setcolor();
-		straight_line();}
+	  if (center_positionx*320 < (320/3)) {
+			turn_left()}
+	  else if(center_positionx*320 > (640/3)) {
+	setTimeout(turn_right, 1000);}
+	  else if ((320/3)< center_positionx*320<(640/3)) {
+	setTimeout(straight_line, 1000);}
 
 
 
