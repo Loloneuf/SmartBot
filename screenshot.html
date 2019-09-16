@@ -61,6 +61,7 @@ function picture(){
     let Red_object_pixel = [];        
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
     const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
+	console.log(imgData)
     for(i=0; i<imgData.length;i +=4){
 	if(imgData[i]>180 && imgData[i+1] <130 && imgData[i+2] <130){
 	Red_object_pixel.push(i/4)
