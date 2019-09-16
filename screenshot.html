@@ -4,11 +4,13 @@
 	<title> Camera Test</title>
 	<link href="./camera.css" rel="stylesheet" type="text/css"/>
 </head>
-	
-	
-	
+
+
+
 <body>
 	<p id ="value"></p>
+	<p id ="value2"></p>
+
 	<div class="holder">
 		<div class="boxe" id="boxe1"  ></div>
 		<div class="boxe" id="boxe2"  ></div>
@@ -26,14 +28,14 @@
   const stop=document.getElementById('stop-button');
   let listbox=['boxe1','boxe2']
   let color=['rgb(0,0,0)','rgb(255,255,255)']
-  const constraints = { 
+  const constraints = {
   video: true,
   video: {
   facingMode: 'environment'},
 }
 
       setcolor();
-  
+
 	function setcolor(){
  for (j=0;j<2;j++){
  document.getElementById(listbox[j]).style.backgroundColor = color[0]
@@ -55,11 +57,13 @@ function turn_left(){
 for (i=0;i<2;i++){
 	document.getElementById(listbox[0]).style.backgroundColor = color[0];
 	document.getElementById(listbox[1]).style.backgroundColor = color[1];
-}}				 
-				 
+}}
+
 function picture(){
-    let Red_object_pixel = [];        
+    let Red_object_pixel = [];
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
+		console.log('###########################')
+		console.log(context.getImageData(0,0, canvas.width, canvas.height))
     const imgData = context.getImageData(0,0, canvas.width, canvas.height).data;
 	console.log(imgData)
     for(i=0; i<imgData.length;i +=4){
@@ -67,11 +71,17 @@ function picture(){
 	Red_object_pixel.push(i/4)
 	imgData[i]=255;
 	imgData[i+1]=0;
-	imgData[i+2]=0;}
-    else{imgData[i]=255;
+	imgData[i+2]=0;
+	}
+  else {
+	imgData[i]=255;
 	imgData[i+1]=255;
-	imgData[i+2]=255;}}
-  console.log(imgData)
+	imgData[i+2]=255;
+}
+}
+
+  console.log(Red_object_pixel)
+
 	 let pic = [];
 	for( i = 0; i < imgData.length; i++) {pic.push(imgData[i]);}
 	let data = {
@@ -83,29 +93,40 @@ function picture(){
      for(i = 0; i < idata.data.length; i++) {idata.data[i] = imgData[i];}
 
      context.putImageData(idata,0,0);
+		let x_position=[];
+		let y_position=[];
+   for (i=0;i<Red_object_pixel.length;i++){
+		 x_position.push(Red_object_pixel[i]%320)
+		 y_position.push(Red_object_pixel[i]/320)
+	 }
+   let sum_of_xpixels = x_position.reduce((previous, current) => current += previous);
+   let center_positionx =sum_of_xpixels / x_position.length;
+	 let sum_of_ypixels = y_position.reduce((previous, current) => current += previous);
+	 let center_positiony =sum_of_ypixels / y_position.length;
+   document.getElementById("value").innerHTML = center_positionx;
+	 document.getElementById("value2").innerHTML = center_positiony;
 
-   let sum_of_pixels = Red_object_pixel.reduce((previous, current) => current += previous);
-	  console.log(sum_of_pixels)
-   let pixel_center_of_object =sum_of_pixels / Red_object_pixel.length;
-	  console.log(pixel_center_of_object)
-   let center_position= pixel_center_of_object/320
-	  console.log(center_position)
-	let test = center_position- Math.trunc(center_position)  
-   document.getElementById("value").innerHTML = test;
-	  if (test*320 < (320/3)) {
+	  if (center_positionx*320 < (320/3)) {
 	setTimeout(turn_left, 1000);}
-	  else if(test*320 > (640/3)) {
+	  else if(center_positionx*320 > (640/3)) {
 	setTimeout(turn_right, 1000);}
-	  else if ((320/3)< test*320<(640/3)) {
+	  else if ((320/3)< center_positionx*320<(640/3)) {
 	setTimeout(straight_line, 1000);}
 
 
-	  
+
   };
-	
+
 captureButton.addEventListener('click', picture)
 
   navigator.mediaDevices.getUserMedia(constraints)
+    .then((stream) => {
+      player.srcObject = stream;
+    });
+
+</script>
+</body>
+</html>
     .then((stream) => {
       player.srcObject = stream;
     });
