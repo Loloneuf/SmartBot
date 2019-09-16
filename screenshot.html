@@ -116,7 +116,9 @@ function picture(){
 
 
   };
-
+function onrepeat{
+	setintervall("picture()",1000)
+}
 captureButton.addEventListener('click', picture)
 
   navigator.mediaDevices.getUserMedia(constraints)
