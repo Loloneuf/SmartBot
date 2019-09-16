@@ -106,13 +106,13 @@ function picture(){
    document.getElementById("value").innerHTML = center_positionx/320;
 	 document.getElementById("value2").innerHTML = center_positiony/240;
 
-	  if (center_positionx< 0.4) {
+	  if ((center_positionx/320)< 0.4) {
 		  setcolor()		
 		  turn_left()}
-	  else if(center_positionx > 0.6) {
+	  else if((center_positionx/320) > 0.6) {
 		setcolor()
 		turn_right()}
-	  else if (0.4< center_positionx<0.6) {
+	  else if (0.4< (center_positionx/320)<0.6) {
 		setcolor()
 		straight_line();}
 
