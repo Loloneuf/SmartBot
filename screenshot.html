@@ -103,23 +103,27 @@ function picture(){
    let center_positionx =sum_of_xpixels / x_position.length;
 	 let sum_of_ypixels = y_position.reduce((previous, current) => current += previous);
 	 let center_positiony =sum_of_ypixels / y_position.length;
-   document.getElementById("value").innerHTML = center_positionx;
-	 document.getElementById("value2").innerHTML = center_positiony;
+   document.getElementById("value").innerHTML = center_positionx/320;
+	 document.getElementById("value2").innerHTML = center_positiony/240;
 
-	  if (center_positionx*320 < (320/3)) {
-	setTimeout(turn_left, 1000);}
-	  else if(center_positionx*320 > (640/3)) {
-	setTimeout(turn_right, 1000);}
-	  else if ((320/3)< center_positionx*320<(640/3)) {
-	setTimeout(straight_line, 1000);}
+	  if (center_positionx< (0.4)) {
+		  setcolor()		
+		  turn_left()}
+	  else if(center_positionx > (0.6)) {
+		setcolor()
+		turn_right()}
+	  else if ((0.4< center_positionx<0.6) {
+		setcolor()
+		straight_line();}
 
 
 
   };
-function onrepeat{
-	setInterval("picture()",1000)
+
+function repeat(){
+	setInterval("picture()",100);
 }
-captureButton.addEventListener('click', picture)
+captureButton.addEventListener('click', repeat)
 
   navigator.mediaDevices.getUserMedia(constraints)
     .then((stream) => {
@@ -129,11 +133,3 @@ captureButton.addEventListener('click', picture)
 </script>
 </body>
 </html>
-    .then((stream) => {
-      player.srcObject = stream;
-    });
-	
-</script>
-</body>
-</html>
-
