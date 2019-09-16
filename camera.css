@@ -2,13 +2,13 @@
     border: 2px black solid;
 	width: 400px;
 	height:400px;
-	margin: 50px auto 200px 40px;
+	margin: 350px auto 200px 40px;
 }
 #boxe2{
     border: 2px black solid;
 	width: 400px;
 	height:400px;
-	margin: 50px auto 200px 30px;
+	margin: 350px auto 200px 30px;
 }
 
 .boxe{
@@ -17,6 +17,6 @@
 }
 
 #Video_window{
-	width:200px;
-	heigh:=200px;
+	width: 200px;
+	height: 200px;
 	margin : 450px auto auto auto;}
