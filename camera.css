@@ -20,3 +20,16 @@
 	width: 200px;
 	height: 200px;
 	margin : 450px auto auto auto;}
+
+  #capture{
+    position: relative;
+height: 240px;
+margin-bottom:-20%
+  }
+
+  #submitexe{
+    position:relative;
+height: 240px;
+margin-left: 90%;
+margin-bottom: :50%;
+  }
