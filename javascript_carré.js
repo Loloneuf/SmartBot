@@ -60,7 +60,7 @@ setTimeout(turn_right, 1000);
 
 function runinfinity(){
 finalexecution()
-setInterval("square()", 2200);
+setInterval("square()", 2500);
 
 }
 
