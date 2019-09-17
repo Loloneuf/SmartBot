@@ -10,3 +10,10 @@ De fait, un professeur souhaitant enseigner la robotique est limité par une sor
 L’idée derrière ce mécanisme de transfert est celle de faire fonctionner un robot en utilisant un smartphone qui affiche une page web produisant de la lumière interagissant  ainsi avec des photo récepteurs. Cette interaction permet un traitement des couleurs (via la caméra) facilités, une réponse quasi immédiate des capteurs  ainsi qu’un accès au code simple via l’interface de la page web.Notons aussi que la puissance de calcul d’un smartphone permet de réaliser rapidement divers calculs nécessaire au fonctionnement de la page web.
 Ainsi, le robot ne nécessite aucune configuration supplémentaire puisque tout sera directement fourni avec l’interface de la page web sur le smartphone qui contrôlera par ailleurs le mouvement de celui-ci. 
 
+## Documentation
+
+- [doc](doc) folder contains all main information about the project and its state of progress.
+- [Arduino code](Arduino_code) folder holds the arduino code needed for the motor to run and for the photosensors to detect light changings.
+- [web page](Web_page) folder holds all html/css/javascript codes needed to make the robot do differents actions like following an object.
+- [media](Media) folder contains pictures and videos about test we mades and robot structure
+
