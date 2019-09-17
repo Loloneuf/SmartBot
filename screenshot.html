@@ -17,14 +17,17 @@
 		<video id="Video_window" controls autoplay></video>
 	<canvas id="Screenshot_window" width=320 height=240></canvas>
 <br>
-	<button id="capture">Take a screenshot</button>
+	<button id="capture" height 240>Take a screenshot</button>
 	
 	</div>
 	<div id="Execute" >
-		<button type="button" id="submitexe">Execute the sequence</button>
+		<button type="button" id="submitexe" height=240>Execute the sequence</button>
     </div>
 
-
+<style>
+	#submitexe{
+		margin-right: 0px;}	
+	</style>
 <script>
   let Execute=document.querySelector('#submitexe');
   const player = document.getElementById('Video_window');
