@@ -18,11 +18,15 @@
 	<canvas id="Screenshot_window" width=320 height=240></canvas>
 <br>
 	<button id="capture">Take a screenshot</button>
-
+	
 	</div>
+	<div id="Execute" >
+		<button type="button" id="submitexe">Execute the sequence</button>
+    </div>
 
 
 <script>
+  let Execute=document.querySelector('#submitexe');
   const player = document.getElementById('Video_window');
   const canvas = document.getElementById('Screenshot_window');
   const context = canvas.getContext('2d');
@@ -54,13 +58,23 @@ for (i=0;i<2;i++){
 	document.getElementById(listbox[1]).style.backgroundColor = color[0];
 	document.getElementById(listbox[0]).style.backgroundColor = color[1];
 }}
-
+Execute.addEventListener('click', runinfinity)
 function turn_left(){
 for (i=0;i<2;i++){
 	document.getElementById(listbox[0]).style.backgroundColor = color[0];
 	document.getElementById(listbox[1]).style.backgroundColor = color[1];
 }}
 
+	function square(){
+setTimeout(straight_line,0);
+setTimeout(turn_right, 1000);}
+	
+	function runinfinity(){
+finalexecution()
+setInterval("square()", 2200);}
+	
+Execute.addEventListener('click', runinfinity)
+		
 function picture(){
     let Red_object_pixel = [];
     context.drawImage(player, 0, 0, canvas.width, canvas.height);
