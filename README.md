@@ -1,7 +1,5 @@
 # SmartBot
 
-Media/image/robot.jpg
-
 [![Robot structure](Media/image/robot.jpg)]
 
 L’objectif de ce projet est celui de réduire les barrières à l’entrée, aussi bien au niveau hardware que software, pour l’initiation à la robotique dans un contexte scolaire. En effet, la plupart des robots capable de mouvements simple et adaptés aux enfants sont chers et nécessitent l'installation de logiciels ainsi qu’un certain degré de connaissances en programmation afin de faire réaliser aux robots des actions. 
