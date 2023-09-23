@@ -15,4 +15,4 @@ Our robot won't need any supplementary configurations as everything is already w
 - [Arduino code](Arduino_code) folder holds the arduino code needed for the motor to run and for the photosensors to detect light changes.
 - [web page](Web_page) folder holds all html/css/javascript codes needed to make the robot do different actions like following an object.
 - [media](Media) folder contains pictures and videos about tests we made and robot structure.
-- [Miscellaneous](Miscellaneous) folder contains various information about further improvements.
+- [Miscellaneous](Miscellaneous) folder contains various information sensors and materials.
